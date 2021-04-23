@@ -1,0 +1,2535 @@
+{
+	"info": {
+		"_postman_id": "51137ef7-07f8-433a-9384-c0a3a9eeb654",
+		"name": "BestTime.app foot traffic API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Api Key info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://besttime.app/api/v1/keys/{{api_key_private}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"keys",
+						"{{api_key_private}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New foot traffic forecast - All",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts?venue_address={{venue_address}}&api_key_private={{api_key_private}}&venue_name={{venue_name}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts"
+					],
+					"query": [
+						{
+							"key": "venue_address",
+							"value": "{{venue_address}}"
+						},
+						{
+							"key": "api_key_private",
+							"value": "{{api_key_private}}"
+						},
+						{
+							"key": "collection_id",
+							"value": "col_b1d34c8d37ba45bcb78523abf5d66ad8",
+							"disabled": true
+						},
+						{
+							"key": "venue_name",
+							"value": "{{venue_name}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Venue Search - Add multiple venues",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://besttime.app/api/v1/venues/search?api_key_private={{api_key_private}}&q=supermarkets in New York City&num=20",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"venues",
+						"search"
+					],
+					"query": [
+						{
+							"key": "api_key_private",
+							"value": "{{api_key_private}}"
+						},
+						{
+							"key": "q",
+							"value": "supermarkets in New York City"
+						},
+						{
+							"key": "num",
+							"value": "20"
+						},
+						{
+							"key": "fast",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "lat",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "lng",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "radius",
+							"value": "10000",
+							"disabled": true
+						},
+						{
+							"key": "busy_min",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "busy_max",
+							"value": "100",
+							"disabled": true
+						},
+						{
+							"key": "busy_conf",
+							"value": "any",
+							"disabled": true
+						},
+						{
+							"key": "hour_min",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "hour_max",
+							"value": "16",
+							"disabled": true
+						},
+						{
+							"key": "now",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "opened",
+							"value": "24",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Venue filter - Filter existing venues",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://besttime.app/api/v1/venues/filter?api_key_private={{api_key_private}}&busy_min=0&busy_max=100",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"venues",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "api_key_private",
+							"value": "{{api_key_private}}"
+						},
+						{
+							"key": "busy_min",
+							"value": "0"
+						},
+						{
+							"key": "busy_max",
+							"value": "100"
+						},
+						{
+							"key": "hour_min",
+							"value": "15",
+							"disabled": true
+						},
+						{
+							"key": "hour_max",
+							"value": "18",
+							"disabled": true
+						},
+						{
+							"key": "lat_min",
+							"value": "-90",
+							"disabled": true
+						},
+						{
+							"key": "lat_max",
+							"value": "90",
+							"disabled": true
+						},
+						{
+							"key": "lng_min",
+							"value": "-180",
+							"disabled": true
+						},
+						{
+							"key": "lng_max",
+							"value": "180",
+							"disabled": true
+						},
+						{
+							"key": "collection_id",
+							"value": "{{collection_id}}",
+							"disabled": true
+						},
+						{
+							"key": "rating_min",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": "rating_max",
+							"value": "4.5",
+							"disabled": true
+						},
+						{
+							"key": "price_min",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "price_max",
+							"value": "3",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New foot traffic forecast - Venue info",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://besttime.app/api/v1/venues?venue_address={{venue_address}}&api_key_private={{api_key_private}}&venue_name={{venue_name}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"venues"
+					],
+					"query": [
+						{
+							"key": "venue_address",
+							"value": "{{venue_address}}"
+						},
+						{
+							"key": "api_key_private",
+							"value": "{{api_key_private}}"
+						},
+						{
+							"key": "collection_id",
+							"value": "col_b1d34c8d37ba45bcb78523abf5d66ad8",
+							"disabled": true
+						},
+						{
+							"key": "venue_name",
+							"value": "{{venue_name}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New foot traffic forecast - Busy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/busy?venue_address={{venue_address}}&api_key_private={{api_key_private}}&venue_name={{venue_name}}&hour_step={{hour_step}}&day_step={{day_step}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"busy"
+					],
+					"query": [
+						{
+							"key": "venue_address",
+							"value": "{{venue_address}}"
+						},
+						{
+							"key": "api_key_private",
+							"value": "{{api_key_private}}"
+						},
+						{
+							"key": "venue_name",
+							"value": "{{venue_name}}"
+						},
+						{
+							"key": "collection_id",
+							"value": "col_b1d34c8d37ba45bcb78523abf5d66ad8",
+							"disabled": true
+						},
+						{
+							"key": "hour_step",
+							"value": "{{hour_step}}"
+						},
+						{
+							"key": "day_step",
+							"value": "{{day_step}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New foot traffic forecast - Week Raw",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/week/raw?venue_address={{venue_address}}&api_key_private={{api_key_private}}&venue_name={{venue_name}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"week",
+						"raw"
+					],
+					"query": [
+						{
+							"key": "venue_address",
+							"value": "{{venue_address}}"
+						},
+						{
+							"key": "api_key_private",
+							"value": "{{api_key_private}}"
+						},
+						{
+							"key": "venue_name",
+							"value": "{{venue_name}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New foot traffic forecast - Week Raw 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/week/raw2?venue_address={{venue_address}}&api_key_private={{api_key_private}}&venue_name={{venue_name}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"week",
+						"raw2"
+					],
+					"query": [
+						{
+							"key": "venue_address",
+							"value": "{{venue_address}}"
+						},
+						{
+							"key": "api_key_private",
+							"value": "{{api_key_private}}"
+						},
+						{
+							"key": "venue_name",
+							"value": "{{venue_name}}"
+						},
+						{
+							"key": "collection_id",
+							"value": "col_b1d34c8d37ba45bcb78523abf5d66ad8",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New foot traffic forecast - Weekoverview",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/week/raw2?venue_address={{venue_address}}&api_key_private={{api_key_private}}&venue_name={{venue_name}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"week",
+						"raw2"
+					],
+					"query": [
+						{
+							"key": "venue_address",
+							"value": "{{venue_address}}"
+						},
+						{
+							"key": "api_key_private",
+							"value": "{{api_key_private}}"
+						},
+						{
+							"key": "venue_name",
+							"value": "{{venue_name}}"
+						},
+						{
+							"key": "collection_id",
+							"value": "col_b1d34c8d37ba45bcb78523abf5d66ad8",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New foot traffic forecast - Day",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/day?venue_address={{venue_address}}&api_key_private={{api_key_private}}&venue_name={{venue_name}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"day"
+					],
+					"query": [
+						{
+							"key": "venue_address",
+							"value": "{{venue_address}}"
+						},
+						{
+							"key": "api_key_private",
+							"value": "{{api_key_private}}"
+						},
+						{
+							"key": "venue_name",
+							"value": "{{venue_name}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New foot traffic forecast - Day Raw",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/day/raw?venue_address={{venue_address}}&api_key_private={{api_key_private}}&venue_name={{venue_name}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"day",
+						"raw"
+					],
+					"query": [
+						{
+							"key": "venue_address",
+							"value": "{{venue_address}}"
+						},
+						{
+							"key": "api_key_private",
+							"value": "{{api_key_private}}"
+						},
+						{
+							"key": "venue_name",
+							"value": "{{venue_name}}"
+						},
+						{
+							"key": "collection_id",
+							"value": "col_b1d34c8d37ba45bcb78523abf5d66ad8",
+							"disabled": true
+						},
+						{
+							"key": "day_int",
+							"value": "{{day_int}}",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New foot traffic forecast - Hour",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/hour?venue_address={{venue_address}}&api_key_private={{api_key_private}}&venue_name={{venue_name}}&day_int={{day_int}}&hour={{hour}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"hour"
+					],
+					"query": [
+						{
+							"key": "venue_address",
+							"value": "{{venue_address}}"
+						},
+						{
+							"key": "api_key_private",
+							"value": "{{api_key_private}}"
+						},
+						{
+							"key": "venue_name",
+							"value": "{{venue_name}}"
+						},
+						{
+							"key": "collection_id",
+							"value": "col_b1d34c8d37ba45bcb78523abf5d66ad8",
+							"disabled": true
+						},
+						{
+							"key": "day_int",
+							"value": "{{day_int}}"
+						},
+						{
+							"key": "hour",
+							"value": "{{hour}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New foot traffic forecast - Hour Raw",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/hour/raw?venue_address={{venue_address}}&api_key_private={{api_key_private}}&venue_name={{venue_name}}&day_int={{day_int}}&hour={{hour}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"hour",
+						"raw"
+					],
+					"query": [
+						{
+							"key": "venue_address",
+							"value": "{{venue_address}}"
+						},
+						{
+							"key": "api_key_private",
+							"value": "{{api_key_private}}"
+						},
+						{
+							"key": "venue_name",
+							"value": "{{venue_name}}"
+						},
+						{
+							"key": "collection_id",
+							"value": "col_b1d34c8d37ba45bcb78523abf5d66ad8",
+							"disabled": true
+						},
+						{
+							"key": "day_int",
+							"value": "{{day_int}}"
+						},
+						{
+							"key": "hour",
+							"value": "{{hour}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New foot traffic forecast - Now",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/now?venue_address={{venue_address}}&api_key_private={{api_key_private}}&venue_name={{venue_name}}&hour_step={{hour_step}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"now"
+					],
+					"query": [
+						{
+							"key": "venue_address",
+							"value": "{{venue_address}}"
+						},
+						{
+							"key": "api_key_private",
+							"value": "{{api_key_private}}"
+						},
+						{
+							"key": "venue_name",
+							"value": "{{venue_name}}"
+						},
+						{
+							"key": "hour_step",
+							"value": "{{hour_step}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New foot traffic forecast - Now Raw",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/now/raw?venue_address={{venue_address}}&api_key_private={{api_key_private}}&venue_name={{venue_name}}&hour_step={{hour_step}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"now",
+						"raw"
+					],
+					"query": [
+						{
+							"key": "venue_address",
+							"value": "{{venue_address}}"
+						},
+						{
+							"key": "api_key_private",
+							"value": "{{api_key_private}}"
+						},
+						{
+							"key": "venue_name",
+							"value": "{{venue_name}}"
+						},
+						{
+							"key": "hour_step",
+							"value": "{{hour_step}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New foot traffic forecast - Quiet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/quiet?venue_address={{venue_address}}&api_key_private={{api_key_private}}&venue_name={{venue_name}}&hour_step={{hour_step}}&day_step={{day_step}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"quiet"
+					],
+					"query": [
+						{
+							"key": "venue_address",
+							"value": "{{venue_address}}"
+						},
+						{
+							"key": "api_key_private",
+							"value": "{{api_key_private}}"
+						},
+						{
+							"key": "venue_name",
+							"value": "{{venue_name}}"
+						},
+						{
+							"key": "collection_id",
+							"value": "col_b1d34c8d37ba45bcb78523abf5d66ad8",
+							"disabled": true
+						},
+						{
+							"key": "hour_step",
+							"value": "{{hour_step}}"
+						},
+						{
+							"key": "day_step",
+							"value": "{{day_step}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New foot traffic forecast - Surge",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/surge?venue_address={{venue_address}}&api_key_private={{api_key_private}}&venue_name={{venue_name}}&hour_step={{hour_step}}&day_step={{day_step}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"surge"
+					],
+					"query": [
+						{
+							"key": "venue_address",
+							"value": "{{venue_address}}"
+						},
+						{
+							"key": "api_key_private",
+							"value": "{{api_key_private}}"
+						},
+						{
+							"key": "venue_name",
+							"value": "{{venue_name}}"
+						},
+						{
+							"key": "collection_id",
+							"value": "col_b1d34c8d37ba45bcb78523abf5d66ad8",
+							"disabled": true
+						},
+						{
+							"key": "hour_step",
+							"value": "{{hour_step}}"
+						},
+						{
+							"key": "day_step",
+							"value": "{{day_step}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New foot traffic forecast - Peaks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/peaks?venue_address={{venue_address}}&api_key_private={{api_key_private}}&venue_name={{venue_name}}&hour_step={{hour_step}}&day_step={{day_step}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"peaks"
+					],
+					"query": [
+						{
+							"key": "venue_address",
+							"value": "{{venue_address}}"
+						},
+						{
+							"key": "api_key_private",
+							"value": "{{api_key_private}}"
+						},
+						{
+							"key": "venue_name",
+							"value": "{{venue_name}}"
+						},
+						{
+							"key": "collection_id",
+							"value": "col_b1d34c8d37ba45bcb78523abf5d66ad8",
+							"disabled": true
+						},
+						{
+							"key": "hour_step",
+							"value": "{{hour_step}}"
+						},
+						{
+							"key": "day_step",
+							"value": "{{day_step}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Live foot traffic data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/live?venue_address={{venue_address}}&api_key_private={{api_key_private}}&venue_name={{venue_name}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"live"
+					],
+					"query": [
+						{
+							"key": "venue_address",
+							"value": "{{venue_address}}"
+						},
+						{
+							"key": "api_key_private",
+							"value": "{{api_key_private}}"
+						},
+						{
+							"key": "venue_name",
+							"value": "{{venue_name}}"
+						},
+						{
+							"key": "profile",
+							"value": "true",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query existing data - All Venues per API key",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://besttime.app/api/v1/venues?api_key_private={{api_key_private}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"venues"
+					],
+					"query": [
+						{
+							"key": "api_key_private",
+							"value": "{{api_key_private}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query existing data - Single venue info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://besttime.app/api/v1/venues/{{venue_id}}?api_key_public={{api_key_public}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"venues",
+						"{{venue_id}}"
+					],
+					"query": [
+						{
+							"key": "api_key_public",
+							"value": "{{api_key_public}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query existing data - All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/week?api_key_public={{api_key_public}}&venue_id={{venue_id}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"week"
+					],
+					"query": [
+						{
+							"key": "api_key_public",
+							"value": "{{api_key_public}}"
+						},
+						{
+							"key": "venue_id",
+							"value": "{{venue_id}}"
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Query week Old Man's",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"api_key_public\": \"352a9addc0ac4c599572e56f504080d3\",\n\t\"venue_id\": \"wqXCm8K8wr7DmcKTw4BsU8KWemrCo8KWdMOFw4TDhMKHwrDClFjChmHConHCsw==\",\n\t\"hour_step\":-8,\n\t\"day_step\":4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"forecasts",
+								"week"
+							],
+							"query": [
+								{
+									"key": "api_key_public",
+									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+								},
+								{
+									"key": "venue_id",
+									"value": "ven_38336f733456504737666a5230693034306e72425831324a496843"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Query existing forecast - Week Raw",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"api_key_public\": \"352a9addc0ac4c599572e56f504080d3\",\n\t\"venue_id\": \"wqXCm8K8wr7DmcKTw4BsU8KWemrCo8KWdMOFw4TDhMKHwrDClFjChmHConHCsw==\",\n\t\"hour_step\":-8,\n\t\"day_step\":4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/week/raw?api_key_public={{api_key_public}}&venue_id={{venue_id}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"week",
+						"raw"
+					],
+					"query": [
+						{
+							"key": "api_key_public",
+							"value": "{{api_key_public}}"
+						},
+						{
+							"key": "venue_id",
+							"value": "{{venue_id}}"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Query week Old Man's",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"api_key_public\": \"352a9addc0ac4c599572e56f504080d3\",\n\t\"venue_id\": \"wqXCm8K8wr7DmcKTw4BsU8KWemrCo8KWdMOFw4TDhMKHwrDClFjChmHConHCsw==\",\n\t\"hour_step\":-8,\n\t\"day_step\":4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"forecasts",
+								"week"
+							],
+							"query": [
+								{
+									"key": "api_key_public",
+									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+								},
+								{
+									"key": "venue_id",
+									"value": "ven_38336f733456504737666a5230693034306e72425831324a496843"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Query existing forecast - Week Raw 2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"api_key_public\": \"352a9addc0ac4c599572e56f504080d3\",\n\t\"venue_id\": \"wqXCm8K8wr7DmcKTw4BsU8KWemrCo8KWdMOFw4TDhMKHwrDClFjChmHConHCsw==\",\n\t\"hour_step\":-8,\n\t\"day_step\":4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/week/raw2?api_key_public={{api_key_public}}&venue_id={{venue_id}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"week",
+						"raw2"
+					],
+					"query": [
+						{
+							"key": "api_key_public",
+							"value": "{{api_key_public}}"
+						},
+						{
+							"key": "venue_id",
+							"value": "{{venue_id}}"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Query week Old Man's",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"api_key_public\": \"352a9addc0ac4c599572e56f504080d3\",\n\t\"venue_id\": \"wqXCm8K8wr7DmcKTw4BsU8KWemrCo8KWdMOFw4TDhMKHwrDClFjChmHConHCsw==\",\n\t\"hour_step\":-8,\n\t\"day_step\":4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"forecasts",
+								"week"
+							],
+							"query": [
+								{
+									"key": "api_key_public",
+									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+								},
+								{
+									"key": "venue_id",
+									"value": "ven_38336f733456504737666a5230693034306e72425831324a496843"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Query existing forecast - Weekoverview",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/weekoverview?api_key_public={{api_key_public}}&venue_id={{venue_id}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"weekoverview"
+					],
+					"query": [
+						{
+							"key": "api_key_public",
+							"value": "{{api_key_public}}"
+						},
+						{
+							"key": "venue_id",
+							"value": "{{venue_id}}"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Query week Old Man's",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"api_key_public\": \"352a9addc0ac4c599572e56f504080d3\",\n\t\"venue_id\": \"wqXCm8K8wr7DmcKTw4BsU8KWemrCo8KWdMOFw4TDhMKHwrDClFjChmHConHCsw==\",\n\t\"hour_step\":-8,\n\t\"day_step\":4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"forecasts",
+								"week"
+							],
+							"query": [
+								{
+									"key": "api_key_public",
+									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+								},
+								{
+									"key": "venue_id",
+									"value": "ven_38336f733456504737666a5230693034306e72425831324a496843"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Query existing forecast - Day",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/day?api_key_public={{api_key_public}}&venue_id={{venue_id}}&day_int=1",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"day"
+					],
+					"query": [
+						{
+							"key": "api_key_public",
+							"value": "{{api_key_public}}"
+						},
+						{
+							"key": "venue_id",
+							"value": "{{venue_id}}"
+						},
+						{
+							"key": "day_int",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Query week Old Man's",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"api_key_public\": \"352a9addc0ac4c599572e56f504080d3\",\n\t\"venue_id\": \"wqXCm8K8wr7DmcKTw4BsU8KWemrCo8KWdMOFw4TDhMKHwrDClFjChmHConHCsw==\",\n\t\"hour_step\":-8,\n\t\"day_step\":4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"forecasts",
+								"week"
+							],
+							"query": [
+								{
+									"key": "api_key_public",
+									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+								},
+								{
+									"key": "venue_id",
+									"value": "ven_38336f733456504737666a5230693034306e72425831324a496843"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Query existing forecast - Day Raw",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/day/raw?api_key_public={{api_key_public}}&venue_id={{venue_id}}&day_int=1",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"day",
+						"raw"
+					],
+					"query": [
+						{
+							"key": "api_key_public",
+							"value": "{{api_key_public}}"
+						},
+						{
+							"key": "venue_id",
+							"value": "{{venue_id}}"
+						},
+						{
+							"key": "day_int",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Query week Old Man's",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"api_key_public\": \"352a9addc0ac4c599572e56f504080d3\",\n\t\"venue_id\": \"wqXCm8K8wr7DmcKTw4BsU8KWemrCo8KWdMOFw4TDhMKHwrDClFjChmHConHCsw==\",\n\t\"hour_step\":-8,\n\t\"day_step\":4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"forecasts",
+								"week"
+							],
+							"query": [
+								{
+									"key": "api_key_public",
+									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+								},
+								{
+									"key": "venue_id",
+									"value": "ven_38336f733456504737666a5230693034306e72425831324a496843"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Query existing forecast - Hour",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/hour?api_key_public={{api_key_public}}&venue_id={{venue_id}}&day_int=1&hour=16",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"hour"
+					],
+					"query": [
+						{
+							"key": "api_key_public",
+							"value": "{{api_key_public}}"
+						},
+						{
+							"key": "venue_id",
+							"value": "{{venue_id}}"
+						},
+						{
+							"key": "day_int",
+							"value": "1"
+						},
+						{
+							"key": "hour",
+							"value": "16"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Query week Old Man's",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"api_key_public\": \"352a9addc0ac4c599572e56f504080d3\",\n\t\"venue_id\": \"wqXCm8K8wr7DmcKTw4BsU8KWemrCo8KWdMOFw4TDhMKHwrDClFjChmHConHCsw==\",\n\t\"hour_step\":-8,\n\t\"day_step\":4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"forecasts",
+								"week"
+							],
+							"query": [
+								{
+									"key": "api_key_public",
+									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+								},
+								{
+									"key": "venue_id",
+									"value": "ven_38336f733456504737666a5230693034306e72425831324a496843"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Query existing forecast - Hour Raw",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/hour/raw?api_key_public={{api_key_public}}&venue_id={{venue_id}}&day_int=1&hour=16",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"hour",
+						"raw"
+					],
+					"query": [
+						{
+							"key": "api_key_public",
+							"value": "{{api_key_public}}"
+						},
+						{
+							"key": "venue_id",
+							"value": "{{venue_id}}"
+						},
+						{
+							"key": "day_int",
+							"value": "1"
+						},
+						{
+							"key": "hour",
+							"value": "16"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Query week Old Man's",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"api_key_public\": \"352a9addc0ac4c599572e56f504080d3\",\n\t\"venue_id\": \"wqXCm8K8wr7DmcKTw4BsU8KWemrCo8KWdMOFw4TDhMKHwrDClFjChmHConHCsw==\",\n\t\"hour_step\":-8,\n\t\"day_step\":4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"forecasts",
+								"week"
+							],
+							"query": [
+								{
+									"key": "api_key_public",
+									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+								},
+								{
+									"key": "venue_id",
+									"value": "ven_38336f733456504737666a5230693034306e72425831324a496843"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Query existing forecast - Now",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/now?api_key_public={{api_key_public}}&venue_id={{venue_id}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"now"
+					],
+					"query": [
+						{
+							"key": "api_key_public",
+							"value": "{{api_key_public}}"
+						},
+						{
+							"key": "venue_id",
+							"value": "{{venue_id}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Query week Old Man's",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"api_key_public\": \"352a9addc0ac4c599572e56f504080d3\",\n\t\"venue_id\": \"wqXCm8K8wr7DmcKTw4BsU8KWemrCo8KWdMOFw4TDhMKHwrDClFjChmHConHCsw==\",\n\t\"hour_step\":-8,\n\t\"day_step\":4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"forecasts",
+								"week"
+							],
+							"query": [
+								{
+									"key": "api_key_public",
+									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+								},
+								{
+									"key": "venue_id",
+									"value": "ven_38336f733456504737666a5230693034306e72425831324a496843"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Query existing forecast - Now Raw",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/now/raw?api_key_public={{api_key_public}}&venue_id={{venue_id}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"now",
+						"raw"
+					],
+					"query": [
+						{
+							"key": "api_key_public",
+							"value": "{{api_key_public}}"
+						},
+						{
+							"key": "venue_id",
+							"value": "{{venue_id}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Query week Old Man's",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"api_key_public\": \"352a9addc0ac4c599572e56f504080d3\",\n\t\"venue_id\": \"wqXCm8K8wr7DmcKTw4BsU8KWemrCo8KWdMOFw4TDhMKHwrDClFjChmHConHCsw==\",\n\t\"hour_step\":-8,\n\t\"day_step\":4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"forecasts",
+								"week"
+							],
+							"query": [
+								{
+									"key": "api_key_public",
+									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+								},
+								{
+									"key": "venue_id",
+									"value": "ven_38336f733456504737666a5230693034306e72425831324a496843"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Query existing forecast - Quiet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/busy?api_key_public={{api_key_public}}&venue_id={{venue_id}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"busy"
+					],
+					"query": [
+						{
+							"key": "api_key_public",
+							"value": "{{api_key_public}}"
+						},
+						{
+							"key": "venue_id",
+							"value": "{{venue_id}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Query week Old Man's",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"api_key_public\": \"352a9addc0ac4c599572e56f504080d3\",\n\t\"venue_id\": \"wqXCm8K8wr7DmcKTw4BsU8KWemrCo8KWdMOFw4TDhMKHwrDClFjChmHConHCsw==\",\n\t\"hour_step\":-8,\n\t\"day_step\":4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"forecasts",
+								"week"
+							],
+							"query": [
+								{
+									"key": "api_key_public",
+									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+								},
+								{
+									"key": "venue_id",
+									"value": "ven_38336f733456504737666a5230693034306e72425831324a496843"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Query existing forecast - Busy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/busy?api_key_public={{api_key_public}}&venue_id={{venue_id}}&day_step=0",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"busy"
+					],
+					"query": [
+						{
+							"key": "api_key_public",
+							"value": "{{api_key_public}}"
+						},
+						{
+							"key": "venue_id",
+							"value": "{{venue_id}}"
+						},
+						{
+							"key": "day_step",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Query week Old Man's",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"api_key_public\": \"352a9addc0ac4c599572e56f504080d3\",\n\t\"venue_id\": \"wqXCm8K8wr7DmcKTw4BsU8KWemrCo8KWdMOFw4TDhMKHwrDClFjChmHConHCsw==\",\n\t\"hour_step\":-8,\n\t\"day_step\":4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"forecasts",
+								"week"
+							],
+							"query": [
+								{
+									"key": "api_key_public",
+									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+								},
+								{
+									"key": "venue_id",
+									"value": "ven_38336f733456504737666a5230693034306e72425831324a496843"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Query existing forecast - Peaks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/peaks?api_key_public={{api_key_public}}&venue_id={{venue_id}}&day_step=0&hour_step=0",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"peaks"
+					],
+					"query": [
+						{
+							"key": "api_key_public",
+							"value": "{{api_key_public}}"
+						},
+						{
+							"key": "venue_id",
+							"value": "{{venue_id}}"
+						},
+						{
+							"key": "day_step",
+							"value": "0"
+						},
+						{
+							"key": "hour_step",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Query week Old Man's",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"api_key_public\": \"352a9addc0ac4c599572e56f504080d3\",\n\t\"venue_id\": \"wqXCm8K8wr7DmcKTw4BsU8KWemrCo8KWdMOFw4TDhMKHwrDClFjChmHConHCsw==\",\n\t\"hour_step\":-8,\n\t\"day_step\":4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"forecasts",
+								"week"
+							],
+							"query": [
+								{
+									"key": "api_key_public",
+									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+								},
+								{
+									"key": "venue_id",
+									"value": "ven_38336f733456504737666a5230693034306e72425831324a496843"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Query existing forecast - Surge",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://besttime.app/api/v1/forecasts/surge?api_key_public={{api_key_public}}&venue_id={{venue_id}}&day_step=0&hour_step=0",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forecasts",
+						"surge"
+					],
+					"query": [
+						{
+							"key": "api_key_public",
+							"value": "{{api_key_public}}"
+						},
+						{
+							"key": "venue_id",
+							"value": "{{venue_id}}"
+						},
+						{
+							"key": "day_step",
+							"value": "0"
+						},
+						{
+							"key": "hour_step",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Query week Old Man's",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"api_key_public\": \"352a9addc0ac4c599572e56f504080d3\",\n\t\"venue_id\": \"wqXCm8K8wr7DmcKTw4BsU8KWemrCo8KWdMOFw4TDhMKHwrDClFjChmHConHCsw==\",\n\t\"hour_step\":-8,\n\t\"day_step\":4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"forecasts",
+								"week"
+							],
+							"query": [
+								{
+									"key": "api_key_public",
+									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+								},
+								{
+									"key": "venue_id",
+									"value": "ven_38336f733456504737666a5230693034306e72425831324a496843"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Collection Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://besttime.app/api/v1/collection?api_key_private={{api_key_private}}&collection_id={{collection_id}}&name=Test collection name",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"collection"
+					],
+					"query": [
+						{
+							"key": "api_key_private",
+							"value": "{{api_key_private}}"
+						},
+						{
+							"key": "collection_id",
+							"value": "{{collection_id}}"
+						},
+						{
+							"key": "name",
+							"value": "Test collection name"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Collection Add venue",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://besttime.app/api/v1/collection/{{collection_id}}/{{venue_id}}?api_key_private={{api_key_private}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"collection",
+						"{{collection_id}}",
+						"{{venue_id}}"
+					],
+					"query": [
+						{
+							"key": "api_key_private",
+							"value": "{{api_key_private}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Collection All venues",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://besttime.app/api/v1/collection/{{collection_id}}?api_key_private={{api_key_private}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"collection",
+						"{{collection_id}}"
+					],
+					"query": [
+						{
+							"key": "api_key_private",
+							"value": "{{api_key_private}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Collection Delete venue",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://besttime.app/api/v1/collection/{{collection_id}}/{{venue_id}}?api_key_private={{api_key_private}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"collection",
+						"{{collection_id}}",
+						"{{venue_id}}"
+					],
+					"query": [
+						{
+							"key": "api_key_private",
+							"value": "{{api_key_private}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Collection Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://besttime.app/api/v1/collection/{{collection_id}}?api_key_private={{api_key_private}}",
+					"host": [
+						"https://besttime.app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"collection",
+						"{{collection_id}}"
+					],
+					"query": [
+						{
+							"key": "api_key_private",
+							"value": "{{api_key_private}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
