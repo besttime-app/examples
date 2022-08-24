@@ -191,86 +191,90 @@ function getFootTrafficData() {
         // Show all live data in the console
         console.log(dataLive);
 
-        pct = dataLive.analysis.venue_live_busyness;
+        if (dataLive.status == "OK") {
 
-        // Scale yaxis higher if we have a live number higher than 100%
-        if (pct > 100) {
-            yaxisMax = pct
-        } else {
-            yaxisMax = 100;
-        }
+            pct = dataLive.analysis.venue_live_busyness;
 
-        if (pct > 80) {
-            liveLabelOffsetHor = 30;
-        } else {
-            liveLabelOffsetHor = -5;
-        }
+            // Scale yaxis higher if we have a live number higher than 100%
+            if (pct > 100) {
+                yaxisMax = pct
+            } else {
+                yaxisMax = 100;
+            }
 
-        // If 5am adjust x-axis to prevent a day wide live bar
-        hour_start_12 = dataLive.analysis.hour_start_12
-        hour_end_12 = dataLive.analysis.hour_end_12
-        if (hour_start_12 == "5AM") {
-            hour_end_12 = "";
-        }
+            if (pct > 80) {
+                liveLabelOffsetHor = 30;
+            } else {
+                liveLabelOffsetHor = -5;
+            }
 
-        // Includes duplicate code for yAxis, this is done on purpose
-        chartToday.setOption({
-            yAxis: {
-                show: true,
-                min: 0,
-                max: yaxisMax,
-                axisLine: {
-                show: false
-                },
-                axisTick: {
-                show: false,
-                },
-                axisLabel: {
-                show: true,
-                interval: 100,
-                showMaxLabel: true,
-                showMinLabel: false,
-                color: "#b5b5b5",
-                // align: 'left',
-                formatter: function (value) {
-                    return value + "%";
-                }
-                }
-            },
-            series: [{
-                "name": "Live busyness",
-                "markArea": {
-                "label": {
-                    "show": true,
-                    "position": [liveLabelOffsetHor, "100%"],
-                    "offset": [0, -210],
-                    "fontSize": 20,
-                    "color": 'white',
-                    "backgroundColor": "#f50057",
-                    "distance": 'top'
-                },
-                "silent": false,
-                "data": [
-                    [{
-                    "name": "Live",
-                    //"type": 'min',
-                    "yAxis": 0,
-                    "value": pct,  //Live value tooltip.
-                    "xAxis": hour_start_12,
-                    "itemStyle": {
-                        "color": "#f50057",
-                        "shadowBlur": 30,
-                        "shadowOffsetX": 1,
-                        "opacity": 0.5
+            // If 5am adjust x-axis to prevent a day wide live bar
+            hour_start_12 = dataLive.analysis.hour_start_12
+            hour_end_12 = dataLive.analysis.hour_end_12
+            if (hour_start_12 == "5AM") {
+                hour_end_12 = "";
+            }
+
+            // Includes duplicate code for yAxis, this is done on purpose
+            chartToday.setOption({
+                yAxis: {
+                    show: true,
+                    min: 0,
+                    max: yaxisMax,
+                    axisLine: {
+                    show: false
+                    },
+                    axisTick: {
+                    show: false,
+                    },
+                    axisLabel: {
+                    show: true,
+                    interval: 100,
+                    showMaxLabel: true,
+                    showMinLabel: false,
+                    color: "#b5b5b5",
+                    // align: 'left',
+                    formatter: function (value) {
+                        return value + "%";
                     }
-                    }, {
-                    "yAxis": pct,
-                    "xAxis": hour_end_12,
-                    }]
-                ]
-                }
-            }]
-            });
+                    }
+                },
+                series: [{
+                    "name": "Live busyness",
+                    "markArea": {
+                    "label": {
+                        "show": true,
+                        "position": [liveLabelOffsetHor, "100%"],
+                        "offset": [0, -210],
+                        "fontSize": 20,
+                        "color": 'white',
+                        "backgroundColor": "#f50057",
+                        "distance": 'top'
+                    },
+                    "silent": false,
+                    "data": [
+                        [{
+                        "name": "Live",
+                        //"type": 'min',
+                        "yAxis": 0,
+                        "value": pct,  //Live value tooltip.
+                        "xAxis": hour_start_12,
+                        "itemStyle": {
+                            "color": "#f50057",
+                            "shadowBlur": 30,
+                            "shadowOffsetX": 1,
+                            "opacity": 0.5
+                        }
+                        }, {
+                        "yAxis": pct,
+                        "xAxis": hour_end_12,
+                        }]
+                    ]
+                    }
+                }]
+                });
+
+        }
 
     })
     .catch(error => {
