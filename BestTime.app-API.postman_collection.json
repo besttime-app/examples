@@ -1123,7 +1123,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public={{api_key_public}}&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1138,7 +1138,7 @@
 							"query": [
 								{
 									"key": "api_key_public",
-									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+									"value": "{{api_key_public}}"
 								},
 								{
 									"key": "venue_id",
@@ -1235,7 +1235,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public={{api_key_public}}&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1250,7 +1250,7 @@
 							"query": [
 								{
 									"key": "api_key_public",
-									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+									"value": "{{api_key_public}}"
 								},
 								{
 									"key": "venue_id",
@@ -1347,7 +1347,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public={{api_key_public}}&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1362,7 +1362,7 @@
 							"query": [
 								{
 									"key": "api_key_public",
-									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+									"value": "{{api_key_public}}"
 								},
 								{
 									"key": "venue_id",
@@ -1439,7 +1439,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public={{api_key_public}}&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1454,7 +1454,7 @@
 							"query": [
 								{
 									"key": "api_key_public",
-									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+									"value": "{{api_key_public}}"
 								},
 								{
 									"key": "venue_id",
@@ -1530,7 +1530,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public={{api_key_public}}&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1545,7 +1545,7 @@
 							"query": [
 								{
 									"key": "api_key_public",
-									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+									"value": "{{api_key_public}}"
 								},
 								{
 									"key": "venue_id",
@@ -1622,7 +1622,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public={{api_key_public}}&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1637,7 +1637,7 @@
 							"query": [
 								{
 									"key": "api_key_public",
-									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+									"value": "{{api_key_public}}"
 								},
 								{
 									"key": "venue_id",
@@ -1717,7 +1717,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public={{api_key_public}}&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1732,7 +1732,7 @@
 							"query": [
 								{
 									"key": "api_key_public",
-									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+									"value": "{{api_key_public}}"
 								},
 								{
 									"key": "venue_id",
@@ -1813,7 +1813,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public={{api_key_public}}&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1828,7 +1828,7 @@
 							"query": [
 								{
 									"key": "api_key_public",
-									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+									"value": "{{api_key_public}}"
 								},
 								{
 									"key": "venue_id",
@@ -1900,7 +1900,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public={{api_key_public}}&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1915,7 +1915,7 @@
 							"query": [
 								{
 									"key": "api_key_public",
-									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+									"value": "{{api_key_public}}"
 								},
 								{
 									"key": "venue_id",
@@ -1988,7 +1988,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public={{api_key_public}}&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -2003,7 +2003,7 @@
 							"query": [
 								{
 									"key": "api_key_public",
-									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+									"value": "{{api_key_public}}"
 								},
 								{
 									"key": "venue_id",
@@ -2075,7 +2075,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public={{api_key_public}}&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -2090,7 +2090,7 @@
 							"query": [
 								{
 									"key": "api_key_public",
-									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+									"value": "{{api_key_public}}"
 								},
 								{
 									"key": "venue_id",
@@ -2166,7 +2166,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public={{api_key_public}}&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -2181,7 +2181,7 @@
 							"query": [
 								{
 									"key": "api_key_public",
-									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+									"value": "{{api_key_public}}"
 								},
 								{
 									"key": "venue_id",
@@ -2261,7 +2261,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public={{api_key_public}}&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -2276,7 +2276,7 @@
 							"query": [
 								{
 									"key": "api_key_public",
-									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+									"value": "{{api_key_public}}"
 								},
 								{
 									"key": "venue_id",
@@ -2356,7 +2356,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public=pub_ma83fcd4b8f2be1745ab937819b5a333&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
+							"raw": "http://localhost:8000/api/v1/forecasts/week?api_key_public={{api_key_public}}&venue_id=ven_38336f733456504737666a5230693034306e72425831324a496843",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -2371,7 +2371,7 @@
 							"query": [
 								{
 									"key": "api_key_public",
-									"value": "pub_ma83fcd4b8f2be1745ab937819b5a333"
+									"value": "{{api_key_public}}"
 								},
 								{
 									"key": "venue_id",
